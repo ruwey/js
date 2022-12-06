@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 Lesson 7</title>
+
+    <script>
+        function init() {
+            outputDiv = document.getElementById("divout");
+        }
+
+        function clickResp() {
+            outputDiv.innerHTML = "You have clicked the button.";
+        }
+    </script>
+</head>
+<body onload="init();">
+    <div id = "divout">
+        You have not clicked the button.
+    </div>
+
+    <button onclick="clickResp();">Click Me!</button>
+</body>
+</html>

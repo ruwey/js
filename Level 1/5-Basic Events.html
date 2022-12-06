@@ -1,0 +1,26 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Level 1 Lesson 5</title>
+    <script>
+        function greet() {
+            console.log("Hello World")
+        };
+
+        function shoutTen() {
+            console.log("10!");
+        }
+        function countDown() {
+            for (var i = 10; i >= 1; i--) {
+                console.log(i);
+            }
+        }
+    </script>
+</head>
+<body onload = "greet();">
+    <button onclick="shoutTen();">Shout 10</button>
+    <button onclick = "countDown();">Count Down</button>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Level 1 Lesson 8</title>
+		<style></style>
+		<script>
+			/*
+				initialize
+				
+				Most programs need a jumping off point, a function in which you can create all of the global variables you need and maybe launch some other tasks.
+				
+				Here, initialize() is that function.
+			*/
+			function initialize()
+			{
+				//The HTML object for the display.
+				numberOutput = document.getElementById("numberout");
+				negativeButton = document.getElementById("negativeBtn");
+				
+				//The actual number that will change during the course of the program.
+				myNumber = 0;
+				negativesAllowed = false;
+				
+				display();
+			}
+			
+			/*
+				addOne
+				
+				This function adds one to the number and calls the display function.
+			*/
+			function addOne()
+			{
+				/*
+					There are many different ways to update a variable.  The most basic is to assign it a new value.
+					
+					x = 3;
+					
+					If you want to change that variable, you can use mathematical operators to update it.
+					
+					x = x + 3;
+					
+					There are, however, some shortcuts.  This first one allows you to add 3 to the value of the variable without having to repeat its name.
+					
+					x += 3;
+					
+					The second one adds 1 to the variable.  You can use ++ and -- to add or subtract one from any variable.  These two shortcuts are very specific and only work to ADD ONE or SUBTRACT ONE.
+					
+					x++;
+				*/
+				myNumber++;
+				display();
+			}
+		
+			/*
+				subtractOne
+				
+				This function subtraccts one from the number and calls the display function.
+			*/
+			function subtractOne()
+			{
+				myNumber--;
+				checkNegative();
+				display();
+			}
+
+			function checkNegative() {
+				if (myNumber < 0 && !negativesAllowed) {
+					myNumber = 0;
+				}
+			}
+
+			function toggleNegatives() {
+				negativesAllowed = !negativesAllowed;
+				checkNegative();
+				display();
+			}
+			
+			/*
+				display
+				
+				Displays the updated number.
+				
+				It's very important, as a programmer, that you distinguish between your back end, the variables and working parts of the program, and the front end, the display and the interface.
+				
+				In this program, I have created a back end variable (myNumber) that represents the changing number.
+				
+				The display function takes that number, whatever it is, and copies its value into the innerHTML of numberOutput, an HTML element (an h1).
+				
+				The output IS NOT the number.  It is a way to show the number.  Think of it like this.  If you are happy, you smile.  If you are angry, you frown.  The smile and the frown are not your emotions.  They are a display of your emotions on your face.
+				
+				numberOutput.innerHTML is NOT the number.  It is simply a way to display the number.
+			*/
+			function display()
+			{
+				numberOutput.innerHTML = myNumber;
+
+				negativeButton.innerHTML = negativesAllowed ? "Negatives are On" 
+															: "Negatives are Off";
+			}
+		</script>
+	</head>
+		
+	<body onload = "initialize();">
+		<h1 id = "numberout"></h1>
+		<hr />
+		<button onclick = "addOne();">Add</button> <button onclick = "subtractOne();">Subtract</button>
+		<button onclick="toggleNegatives();" id="negativeBtn">Negatives are OFF</button>
+	</body>
+</html>
