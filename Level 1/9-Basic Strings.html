@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Level 1 Lesson 9</title>
+    <meta charset="utf-8" />
+    <script>
+     function init() {
+       messageOutput = document.getElementById("output");
+
+       message = "";
+     }
+
+     function display() {
+       messageOutput.innerHTML = message;
+     }
+
+     function addChar(char) {
+       message += char;
+       display();
+     }
+    </script>
+  </head>
+  <body onload="init();">
+    <div id="output"></div>
+    <hr/>
+    <button onclick="addChar('A');">A</button>
+    <button onclick="addChar('B');">B</button>
+    <button onclick="addChar('C');">C</button>
+    <button onclick="addChar('D');">D</button>
+    <button onclick="addChar('E');">E</button>
+    <button onclick="addChar('F');">F</button>
+    <button onclick="addChar('G');">G</button>
+    <button onclick="addChar('H');">H</button>
+    <button onclick="addChar('I');">I</button>
+    <button onclick="addChar('J');">J</button>
+    <button onclick="addChar('K');">K</button>
+    <button onclick="addChar('L');">L</button>
+    <button onclick="addChar('M');">M</button>
+    <button onclick="addChar('N');">N</button>
+    <button onclick="addChar('O');">O</button>
+    <button onclick="addChar('P');">P</button>
+    <button onclick="addChar('Q');">Q</button>
+    <button onclick="addChar('R');">R</button>
+    <button onclick="addChar('S');">S</button>
+    <button onclick="addChar('T');">T</button>
+    <button onclick="addChar('U');">U</button>
+    <button onclick="addChar('V');">V</button>
+    <button onclick="addChar('W');">W</button>
+    <button onclick="addChar('X');">X</button>
+    <button onclick="addChar('Y');">Y</button>
+    <button onclick="addChar('Z');">Z</button>
+    <br/>
+    <button onclick="addChar('1');">1</button>
+    <button onclick="addChar('2');">2</button>
+    <button onclick="addChar('3');">3</button>
+    <button onclick="addChar('4');">4</button>
+    <button onclick="addChar('5');">5</button>
+    <button onclick="addChar('6');">6</button>
+    <button onclick="addChar('7');">7</button>
+    <button onclick="addChar('8');">8</button>
+    <button onclick="addChar('9');">9</button>
+    <button onclick="addChar('0');">0</button>
+  </body>
+</html>
