@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+<!--
+     Gordon R. Dewey
+     TT Level 3
+     December 14, 2022
+
+     From this lesson, I have learned:
+     * how to interact with form in javascript
+     * how to use radio buttons
+     * why html has different list and table item types
+-->
+<html>
+  <head>
+    <title>Level 3 Lesson 6</title> 
+    <meta charset="utf-8" />
+
+    <!-- Skewer Code -->
+    <script src="/skewer"></script>
+
+    <!-- CSS -->
+    <style>
+     table {
+       border: thick solid grey;
+       border-collapse: collapse;
+       width: 25%;
+     }
+
+     th, td {
+       border: thin solid black;
+       padding: 8px;
+       width: 50px;
+     }
+    </style>
+
+    <!-- JS -->
+    <script>
+     function init() {
+       diceTable = document.getElementById("dicetable");
+       rollDice();
+     }
+
+     function rollDice() {
+       var numRolls = Math.random() * 76 + 25;
+
+       for (let i = 0; i < numRolls; i++) {
+	 let diceRoll = Math.floor(1 + Math.random() * 6);
+
+	 let newRow = diceTable.insertRow();
+	 let newCell = newRow.insertCell();
+	 newCell.innerHTML = "Roll " + (i + 1);
+
+	 newCell = newRow.insertCell();
+	 newCell.innerHTML = diceRoll;
+       }
+     }
+
+    </script>
+  </head>
+  <body onload="init();">
+    <h1>Dice Roles</h1>
+    <table id="dicetable">
+      <tr>
+	<th>Roll</th>
+	<th>Result</th>
+      </tr>
+    </table>
+  </body>
+</html>
