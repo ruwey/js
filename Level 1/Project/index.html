@@ -15,8 +15,15 @@
       <em>Can you break the code?</em> You get 7 guesses (denoted by the time left) to get the password (a random three digit number with digets from 1 to 3).
     </p>
     <h2>Time Left: <span id="time">7</span> seconds</h2>
-    <div id="keypad">
-
-    </div>
+    <h2>Current Guess: <span id="currentGuess"></span></h2>
+    <h2>Keypad:</h2>
+    <button onclick="enterKey('1');">1</button>
+    <button onclick="enterKey('2');">2</button>
+    <button onclick="enterKey('3');">3</button>
+    <br/>
+    <button onclick="clearKeypad();">Clear</button>
+    <h2>Guess List:</h2>
+    <hr/>
+    <div id="guessList"></div>
   </body>
 </html>
