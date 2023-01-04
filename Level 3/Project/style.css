@@ -1,0 +1,168 @@
+/*
+  My (Gordon R. Dewey's) shared stylesheet. This is so I can give everything in this class a fairly consistent look without copying all the colors and such every time.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Zilla+Slab:ital,wght@0,500;0,600;0,700;1,500&display=swap");
+
+body {
+    margin: 0px;
+    background-color: #feedeb;
+}
+
+.content {
+    width: min(100vw, 600px);
+    margin: auto;
+    position: relative;
+}
+
+/* Header Stuff */
+header a,
+header a:visited,
+header a:hover {
+    color: inherit;
+}
+
+header {
+    background-color: salmon;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+header > * {
+    margin: 0px;
+}
+
+header > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Zilla Slab", serif;
+}
+
+header > div > p {
+    font-weight: 700;
+    font-size: 2rem;
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+}
+
+header > div > nav {
+    font-size: 1rem;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    header > div {
+	display: block;
+	padding-top: 10px;
+	padding-bottom: 10px;
+    }
+
+    header > div > * {
+	margin: 5px;
+    }
+}
+
+h1 {
+    font-size: xx-large;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+
+h1:before {
+    position: absolute;
+    content: "";
+    background-color: #fcb7af;
+    width: 100%;
+    height: 1.2rem;
+    z-index: -1;
+    bottom: 0;
+    transform: translate(0.2rem, -0.2rem);
+}
+
+h2 {
+    text-decoration: underline 8px solid #fcb7af;
+}
+
+img,
+iframe {
+    max-width: 500px;
+    margin-left: 100px;
+}
+
+li {
+    padding: 10px;
+}
+
+input {
+    width: 95%;
+    height: 95%;
+}
+
+/* Table (On First and Last Page) */
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border: 3px black solid;
+    width: 600px;
+    margin-left:100px
+}
+
+table td {
+    background-color: #e8ac9b;
+}
+table th {
+    background-color: #f19687;
+}
+
+table * {
+    padding: 10px;
+    border: 1px black solid;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    p {
+	text-align: justify;
+	margin: 8px;
+    }
+
+    img {
+	margin: 0px;
+	max-width: 100vw;
+    }
+
+    table {
+	margin: 0px;
+	width: 100vw;
+    }
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, min(auto));
+    width: 100%;
+    height: 300px;
+    margin-left: 100px;
+}
+
+div.gallery > img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    padding: 0px;
+    margin-left: 0px;
+}
+
+/* Mobile */
+@media (max-width: 550px) {
+    .gallery {
+	display: block;
+	height: inherit;
+	margin-left: 0px;
+    }
+}

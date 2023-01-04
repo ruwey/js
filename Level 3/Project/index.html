@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Level 3 Project</title>
+    <meta charset="utf-8" />
+    <link href="style.css" rel="stylesheet"/>
+    <link href="spcific.css" rel="stylesheet"/>
+    <script src="index.js"></script>
+    <script src="/skewer"></script>
+  </head>
+  <body onload="init();">
+    <header>
+      <div class="content">
+        <h1>Slider Puzzle</h1>
+      </div>
+    </header>
+    <div class="content">
+      <p>
+        To all of the tiles so that they are increacing (left to right, then top to bottom, with the empty space in the top left). To move the tiles, click on one that is next to an empty space and it will switch with the empty space.
+      </p>
+
+      <div id="board">
+        <!-- Where the JS should attach the game bord -->
+      </div>
+
+      <div id="stateButtons">
+        <button onClick="startGame();">Start</button>
+	<button onClick="generateGame();">Generate</button>
+      </div>
+
+      <p>Moves: <span id="moves">0</span></p>
+      <p>State: <span id="state">Initial</span></p>
+    </div>
+  </body>
+</html>

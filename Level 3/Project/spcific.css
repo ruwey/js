@@ -1,0 +1,43 @@
+/* Buttons */
+#stateButtons {
+    display: flex;
+    justify-content: space-evenly;
+    width: 420px;
+    margin: auto;
+}
+
+@media (max-width: 550px) {
+    #stateButtons {
+	flex-direction: column;
+    }
+}
+
+#stateButtons > * {
+    padding: 10px;
+    border: 1px solid black;
+    width: 100%;
+    background: #fcb7af;
+}
+
+/* Board */
+#board {
+    position: relative;
+    margin: auto;
+    display: grid;
+    grid-template-rows: repeat(4, min-content);
+    grid-template-columns: repeat(4, 1fr);
+    width: 400px;
+    border: 10px solid black;
+    margin-bottom: 10px;
+}
+
+#board > * {
+    aspect-ratio: 1/1;
+    background: salmon;
+    border: 1px solid black;
+    max-height: 100px;
+}
+
+#open {
+    background: #fcb7af ;
+}
