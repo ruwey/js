@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Level 4 Project</title>
+    <meta charset="utf-8" />
+    <link href="../../style.css" rel="stylesheet"/>
+    <link href="spcific.css" rel="stylesheet"/>
+    <script src="index.js" ></script>
+  </head>
+  <body onload="init();">
+    <header>
+      <div class="content">
+	<h1>Picture Puzzle</h1>
+      </div>
+    </header>
+
+    <div class="content">
+      <p>
+        In this game, you try to find the original image! Press generate to create your image (you can upload your own if you want) and start to shuffle and begin counting moves.
+      </p>
+
+      <div id="board">
+
+      </div>
+
+      <div class="options">
+        <button onclick="genBoard();">Generate</button>
+        <button onclick="startButton();">Start/Shuffle</button>
+	<input id="user_image" type="file" accept="image/*" />
+	<button id="user_submit" onclick="uploadImage();">Upload</button>
+        <p id="moves"></p>
+        <p id="state">Pre-Game</p>
+      </div>
+    </div>
+  </body>
+</html>
