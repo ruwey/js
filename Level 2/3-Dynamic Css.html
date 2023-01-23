@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Level 2 Lesson 3: Dynamic CSS</title>
+    <meta charset="utf-8" />
+
+    <style>
+     div {
+       color: black;
+       background-color: orange;
+
+       textWidth = 100;
+     }
+    </style>
+
+    <script>
+     function init() {
+       colordiv = document.getElementById("colordiv");
+
+       fore = "black";
+       back = "orange";
+     }
+
+     function toggleColors() {
+       let temp = fore;
+       fore = back;
+       back = temp;
+
+       display();
+     }
+
+     function changeWidth(width) {
+       textWidth = width;
+       display();
+     }
+
+     function display() {
+       colordiv.style.color = fore;
+       colordiv.style.backgroundColor = back;
+
+       colordiv.style.width = textWidth + '%';
+     }
+    </script>
+  </head>
+  <body onload="init();">
+    <div id="colordiv">
+      Click the button to toggle my colors.
+    </div>
+
+    <p>
+      <button onclick="toggleColors();">Toggle Colors</button>
+      <button onclick="changeWidth(25);">25% Width</button>
+      <button onclick="changeWidth(50);">50% Width</button>
+      <button onclick="changeWidth(75);">75% Width</button>
+      <button onclick="changeWidth(100);">100% Width</button>
+    </p>
+  </body>
+</html>

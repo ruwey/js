@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+p {
+    font: bold 6pt arial;
+}
+
+button {
+    background-color: red;
+    font: 14pt sans serif;
+}
+   

@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Level 2 Lesson 5: External Files</title>
+    <meta charset="utf-8" />
+
+    <link href="wowcss.css" rel="stylesheet"/>
+    <script src="utilities.js"></script>
+    <script>
+     function init() {
+       numOut = document.getElementById("numOut");
+       rndNum = 0;
+
+       display();
+     }
+
+     function changeNumber() {
+       rndNum = randInt(2, 22);
+       display();
+     }
+
+     function display() {
+       numOut.innerHTML = rndNum;
+     }
+    </script>
+  </head>
+  <body onload="init();">
+    <h1>Multiple files! What is this 1970!!!</h1>
+    <p id="numOut"></p>
+    <button onclick="changeNumber();" >Change the number.</button>
+
+  </body>
+</html>

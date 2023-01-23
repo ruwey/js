@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Level 2 Lesson 4: CSS Complex Properties</title>
+    <meta charset="utf-8" />
+
+    <style>
+     div {
+      /* font-family: sans serif;
+       font-size: 24pt;
+       font-weight: bold; */
+
+       font: bold 24pt sans serif;
+       text-decoration: underline green wavy;
+     }
+    </style>
+
+    <script>
+     function init() {
+       sizeDisplay = document.getElementById("sizeDisplay");
+       textDiv = document.getElementById("textdiv");
+
+       fontSize = 24;
+     }
+
+     function changeFont(mod) {
+       fontSize += mod;
+
+       if (fontSize < 4)
+	 fontSize = 4;
+
+       display();
+     }
+
+     function display() {
+       sizeDisplay.innerHTML = fontSize;
+       textDiv.style.fontSize = fontSize + "pt";
+     }
+    </script>
+  </head>
+  <body onload="init();">
+    <div id="textdiv">
+      Font sample wow!!
+    </div>
+
+    <p>Current Font Size is <span id="sizeDisplay"></span> pt</p>
+    <p><button onclick="changeFont(1);">+</button><button onclick="changeFont(-1);">-</button> </p>
+  </body>
+</html>
